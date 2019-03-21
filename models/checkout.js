@@ -46,6 +46,9 @@
     </div>
 </div> */}
 
+var stripe = Stripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+var elements = stripe.elements();
+
 Stripe.setpPublishableKey('pk_test_nC9dliwHKOdfTUtVZGu1Ff6100ulsdFoz2');
 
 var $form = ('#checkout-form');
