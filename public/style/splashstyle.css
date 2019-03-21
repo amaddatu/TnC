@@ -41,3 +41,35 @@ button:hover, a:hover {
     z-index: -2;
 }
 
+@media only screen and (max-width : 768px) {
+    #tasteLogo {
+        min-width: 90%;
+        display: block;
+        margin: auto;
+        margin-top: 10%;
+    }
+    button, a{
+        display: inline-block;
+        min-width: 50%;
+        margin: auto;
+        border-color: #b97f6d;
+        background-color: transparent;
+        color: #b97f6d;
+        padding: 10px;
+        font-family: 'Satisfy', cursive;
+        font-size: 5vw;
+        border-radius: 30%;
+        border-width: 2px;  
+    }
+    #bgImage {
+        position: fixed;
+        display: block;
+        margin: auto;
+        bottom: 0%;
+        left: -8%;
+        width: 115%;
+        opacity: .5;
+        z-index: -2;
+    }
+
+}
