@@ -79,15 +79,15 @@ button#checkout {
 };
 @media only screen and (max-width : 768px) {
     nav#hBurger {
-        display: block;
+        display: block !important;
         position: absolute;
         top: 20px;
         right: 20px;
     }
     nav#mainNav {
-        display: none;
+        display: none !important;
         margin-left: 25%;
         margin-right: 25%;
     }
    
-    }
+    };
