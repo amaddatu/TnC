@@ -53,10 +53,51 @@ var $form = ('#checkout-form');
 $form.submit(function(event) {
     $form.find('button').prop('disabled', true);
     Stripe.card.createToken({
-        number: $form('.card-number').val(),
-        cvc: $form('.card-cvc').val(),
-        exp_month: $form('.card-expiry-month').val(),
-        exp_year: $form('.card-expiry-year').val()
+        number: $form('#card-number').val(),
+        cvc: $form('#card-cvc').val(),
+        exp_month: $form('#card-expiry-month').val(),
+        exp_year: $form('#card-expiry-year').val(),
+        name: $form('#card-name').val()
     },  stripeResponseHandler);
-})
+    return false;
+});
+
+card.addEventListener('change', function(event) {
+    var displayError = document.getElementById('card-errors');
+    if (event.error) {
+      displayError.textContent = event.error.message;
+    } else {
+      displayError.textContent = 'Card Info Not Valid';
+    }
+  });
+
+var form = document.getElementById('payment-form');
+form.addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  stripe.createToken(card).then(function(result) {
+    if (result.error) {
+      // Inform the customer that there was an error.
+      var errorElement = document.getElementById('card-errors');
+      errorElement.textContent = result.error.message;
+    } else {
+      // Send the token to your server.
+      stripeTokenHandler(result.token);
+    }
+  });
+});
+
+function stripeTokenHandler(token) {
+    // Insert the token ID into the form so it gets submitted to the server
+    var form = document.getElementById('payment-form');
+    var hiddenInput = document.createElement('input');
+    hiddenInput.setAttribute('type', 'hidden');
+    hiddenInput.setAttribute('name', 'stripeToken');
+    hiddenInput.setAttribute('value', token.id);
+    form.appendChild(hiddenInput);
+  
+    // Submit the form
+    form.submit();
+  }
+
 
