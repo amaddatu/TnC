@@ -1,4 +1,4 @@
-module.exports = function Cart(initItems) {
+/* module.exports = function Cart(initItems) {
     this.items = initItems;
 
     this.totalQty = 0;
@@ -29,4 +29,4 @@ module.exports = function Cart(initItems) {
         }
         return arr;
     };
-};
+}; */
