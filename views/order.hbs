@@ -1,0 +1,110 @@
+<div class=" container" id="aboutContent">
+    <div class="row">
+        <div class="col-7">
+            <h1>Special's Menu</h1>
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+                                Cakes
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    Vanilla <a href="/add-to-cart/{{this.id}}" class="btn btn-info pull-right"
+                                        role="button"></a></li>
+                                <li class="list-group-item">
+                                    Chocolate <a href="/add-to-cart/{{this.id}}" class="btn btn-info pull-right"
+                                        role="button"></a></li>
+                                <li class="list-group-item">
+                                    Strawberry <a href="/add-to-cart/{{this.id}}" class="btn btn-info pull-right"
+                                        role="button"></a></li>
+                                <li class="list-group-item">
+                                    Oreo <a href="/add-to-cart/{{this.id}}" class="btn btn-info pull-right"
+                                        role="button"></a></li>
+                                <li class="list-group-item">
+                                    Nutella <a href="/add-to-cart/{{this.id}}" class="btn btn-info pull-right"
+                                        role="button"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Cookies
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Misc.
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                                <li class="list-group-item">Item</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-5">
+            <h1>Your Order</h1>
+            {{# if this.products }}
+            <ul class="list-group">
+                {{#each products}}
+                <li class="list-group-item">
+                    <span class="badge">{{this.qty}}</span>
+                    <span style="font-weight: bold">{{this.item.title}}</span>
+                    <span class="label label-success">${{this.price}}</span>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Action <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Reduce by 1</a></li>
+                            <li><a href="#">Remove All</a></li>
+                        </ul>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+            <h3>total: </h3>
+            <button type="button" id="checkout"><a href="../html/checkout.html">checkout</a></button>
+        </div>
+    </div>
+</div>

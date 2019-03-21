@@ -1,0 +1,43 @@
+/*
+ colors
+    e9aa90
+    b97f6d
+    ffffff
+*/
+nav {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+button, a{
+    display: block;
+    border-color: #b97f6d;
+    background-color: transparent;
+    color: #b97f6d;
+    padding: 10px;
+    font-family: 'Satisfy', cursive;
+    font-size: 3vw;
+    border-radius: 30%;
+    border-width: 2px;  
+}
+button:hover, a:hover {
+    border-color: #e9aa90;
+    outline-color: #e9aa90;
+    color: #e9aa90;
+}
+#tasteLogo {
+    max-width: 50vw;
+    display: block;
+    margin: auto;
+    margin-top: 10%;
+}
+#bgImage {
+    position: fixed;
+    display: block;
+    margin: auto;
+    bottom: -25%;
+    left: -8%;
+    width: 115%;
+    opacity: .5;
+    z-index: -2;
+}
+

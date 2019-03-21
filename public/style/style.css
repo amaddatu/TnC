@@ -1,0 +1,87 @@
+/*
+ colors
+    e9aa90
+    b97f6d
+    ffffff
+*/
+body {
+    font-size: 2vw;
+    margin-top: 2vw;
+    font-family: 'Comfortaa', cursive;
+    color: rgb(80, 80, 80);
+}
+h1 {
+    font-size: 4vw;
+}
+h2 {
+    font-size: 3vw;
+}
+h3 {
+    font-size: 2.5vw;
+}
+nav#mainNav {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+nav#hBurger {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+button, a{
+    display: block;
+    border-color: #b97f6d;
+    background-color: transparent;
+    color: #b97f6d;
+    padding: 10px;
+    font-family: 'Satisfy', cursive;
+    font-size: 3vw;
+    border-radius: 30%;
+    border-width: 2px;  
+}
+button:hover, a:hover {
+    border-color: #e9aa90;
+    color: #e9aa90;
+}
+#tasteLogo {
+    max-width: 40vw;
+    display: block;
+    margin: auto;
+}
+.col-7, .col-5 {
+    min-height: 50%;
+    max-width: 45%;
+    border: 3px solid #b97f6d;
+    margin: 1vw;
+    padding: 1vw;
+    align-content: center;
+}
+button#homeButton{
+    font-size: 2vw;
+    top: 0px;
+    right: 0px;
+    opacity: .5;
+    border: none;
+}
+button#checkout {
+    text-align: right;
+    bottom: 0px;
+    font-size: 2vw;
+    border: none;
+
+}
+@media only screen and (max-width : 768px) {
+    nav#hBurger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    nav#mainNav {
+        display: none;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+   
+    }
