@@ -1,32 +1,24 @@
-/* module.exports = function Cart(initItems) {
-    this.items = initItems;
+module.exports = function Cart(oldCart){
+    this.items = oldCart.items;
+    this.totalQty = oldCart.totalQty;
+    this.totalPrice = oldCart.totalPrice;
 
-    this.totalQty = 0;
-    this.totalPrice = 0;
-
-    if (this.items) {
-        for (var key in this.items) {
-            this.totalQty += this.items[key].qty;
-            this.totalPrice += this.items[key].qty * this.items[key].item.price;
-        }
-    }
-
-    this.add = function (item, id) {
+    this.add = function(item, id) {
         var storedItem = this.items[id];
         if (!storedItem) {
-            storedItem = this.items[id] = {qty: 0, item: item, price: 0};
+            storedItem = this.itmes[id] = {item: item, qty: 0, price: 0};
         }
         storedItem.qty++;
-        storedItem.price = storedItem.item.price * storedItem.qty;
-        this.totalQty++;
+        storedItem.price = storedItem.price * storedItem.qty;
+        this.totalQty++;  
         this.totalPrice += storedItem.price;
     };
 
-    this.generateArray = function () {
+    this.generateArray = function() {
         var arr = [];
         for (var id in this.items) {
             arr.push(this.items[id]);
         }
         return arr;
     };
-}; */
+};
