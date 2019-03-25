@@ -29,7 +29,7 @@ VALUES ("Chocolate 5 inch Drip Cake", 50, "cake"),
     ("Cookies n' Cream Sylvanas (6)", 20, "cookie"),
     ("Cookies n' Cream Sylvanas (12)", 39, "cookie");
    
--- SELECT * FROM menu_db.goodies;
+SELECT * FROM menu_db.goodies;
 
 /* 
 DROP DATABASE IF EXISTS testdb;

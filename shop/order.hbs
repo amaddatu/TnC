@@ -83,9 +83,9 @@
         </div>
         <div class="col-5">
             <h1>Your Order</h1>
-            {{!-- {{# if this.products }} --}}
+            {{# if this.products }}
             <ul class="list-group">
-                {{!-- {{#each products}}
+                {{#each products}}
                 <li class="list-group-item">
                     <span class="badge">{{this.qty}}</span>
                     <span style="font-weight: bold">{{this.item.title}}</span>
@@ -101,7 +101,7 @@
                         </ul>
                     </div>
                 </li>
-                {{/each}} --}}
+                {{/each}}
             </ul>
             <h3>total: </h3>
             <button type="button" id="checkout"><a href="/checkout">checkout</a></button>
