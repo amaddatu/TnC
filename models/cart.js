@@ -31,7 +31,7 @@
 
 // ANTHONY'S revisions (reqcquaint sequelize)
 module.exports = function(sequelize, DataTypes) {
-    var Order = sequelize.define("Order", {
+    var Cart = sequelize.define("Order", {
       name: DataTypes.STRING,
       total: DataTypes.DECIMAL(10,2),
       category: DataTypes.STRING,
@@ -40,5 +40,5 @@ module.exports = function(sequelize, DataTypes) {
         defaultValue: 1
       }
     });
-    return Order;
+    return Cart;
   };
