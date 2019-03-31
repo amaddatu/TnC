@@ -1,11 +1,11 @@
 -- DROP DATABASE IF EXISTS menu_db;
--- CREATE DATABASE menu_db;
+CREATE DATABASE menu_db;
 
-USE menu_db;
+/* USE menu_db; */
 
 -- DROP TABLE IF EXISTS goodies;
 
-CREATE TABLE goodies(
+/* CREATE TABLE goodies(
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(100) NOT NULL,
   price INT default 0,
@@ -29,7 +29,7 @@ VALUES ("Chocolate 5 inch Drip Cake", 50, "cake"),
     ("Cookies n' Cream Sylvanas (6)", 20, "cookie"),
     ("Cookies n' Cream Sylvanas (12)", 39, "cookie");
    
-SELECT * FROM menu_db.goodies;
+SELECT * FROM menu_db.goodies; */
 
 /* 
 DROP DATABASE IF EXISTS testdb;

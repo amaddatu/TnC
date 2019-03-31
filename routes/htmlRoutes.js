@@ -41,7 +41,7 @@ module.exports = function(app) {
   });
   app.get("/order", function(req, res) {
     res.render("order", {
-      layout: "main"
+      layout: "empty"
     });
   });
   app.get("/news", function(req, res) {
